@@ -8,7 +8,7 @@ import process from "process";
 const request = axios.create({
   baseURL: "https://youtube.googleapis.com/youtube/v3/",
   params: {
-    key: "AIzaSyCi0WI1DWunTEUXvEwftIOXIqKibekFLrw",
+    key: "AIzaSyA8OtTZdmz-dQsZNCs4nCfNYJJicSBfdCU",
   },
 });
 
