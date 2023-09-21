@@ -7,6 +7,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { MdNotifications, MdApps } from "react-icons/md";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ handleToggleSidebar }) => {
@@ -18,6 +19,8 @@ const Header = ({ handleToggleSidebar }) => {
     e.preventDefault();
     history(`/search/${input}`);
   };
+
+  const { photoURL } = useSelector((state) => state.auth?.user);
 
   return (
     <div className="header">
@@ -45,7 +48,7 @@ const Header = ({ handleToggleSidebar }) => {
       <div className="header_icon">
         <MdNotifications size={28} />
         <MdApps size={28} />
-        <img src={Avatar} alt="avatar" />
+        <img src={photoURL} alt="avatar" />
       </div>
     </div>
   );

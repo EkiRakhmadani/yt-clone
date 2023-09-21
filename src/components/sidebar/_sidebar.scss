@@ -12,6 +12,14 @@
   top: 10vh;
   left: 0;
 
+  a {
+    color: $text-color;
+    text-decoration: none;
+    &:hover {
+      color: $text-color;
+    }
+  }
+
   li {
     display: flex;
     align-items: center;

@@ -10,6 +10,7 @@ import {
   checkSubscriptionStatus,
   getChannelDetails,
 } from "../../redux/actions/channel.action";
+import HelmetCustom from "../HelmetCustom";
 
 // const VideoMetaData = () => {
 const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
@@ -32,6 +33,7 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
 
   return (
     <div className="videoMetaData py-2">
+      <HelmetCustom title={title} description={description} />
       {/* Metadata - TOP */}
       <div className="videoMetaData_top">
         <h5>{title}</h5>
